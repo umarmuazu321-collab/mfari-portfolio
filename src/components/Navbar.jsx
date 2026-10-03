@@ -47,7 +47,7 @@ function Navbar() {
   }
 
   return (
-    <header className="site-header">
+    <header className={'site-header ' + (isMenuOpen ? 'is-menu-open' : '')}>
       <nav className="nav-wrap" aria-label="Main navigation">
         <a href="#home" className="brand" onClick={(event) => handleNavigation(event, 'home')}>
           <span className="brand-mark" aria-hidden="true">M</span>
