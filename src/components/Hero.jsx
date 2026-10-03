@@ -18,11 +18,16 @@ function Hero() {
         </div>
 
         <div className="hero-visual">
+          <div className="hero-orbit" aria-hidden="true" />
           <div className="hero-stamp">Built<br />with<br />purpose</div>
           <div className="portrait-frame">
             <img src={profileImage} alt="Mfari WebDev" />
           </div>
-          <div className="hero-note">Thoughtful interfaces / useful experiences</div>
+          <div className="hero-note">
+            <span className="hero-note-dot" aria-hidden="true" />
+            <span className="hero-note-title">Web Developer</span>
+            <span className="hero-note-meta">React / JavaScript / UI</span>
+          </div>
         </div>
       </div>
     </section>
