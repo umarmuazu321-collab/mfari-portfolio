@@ -131,14 +131,9 @@ button { cursor: pointer; }
 .project-grid { display: grid; gap: 22px; margin-top: 62px; grid-template-columns: repeat(2, 1fr); }
 .project-card { overflow: hidden; border: 1px solid rgba(246, 244, 239, 0.14); border-radius: 5px; background: #1a1f1e; transition: border-color 200ms ease, transform 200ms ease; }
 .project-card:hover { border-color: rgba(196, 243, 107, 0.7); transform: translateY(-6px); }
-.project-preview { position: relative; display: flex; min-height: 290px; flex-direction: column; justify-content: space-between; overflow: hidden; padding: 23px; isolation: isolate; }
-.project-preview::before { position: absolute; inset: 0; z-index: -1; background: linear-gradient(135deg, var(--preview-start), var(--preview-end)); content: ""; }
-.project-preview::after { position: absolute; top: -100px; right: -80px; z-index: -1; width: 290px; height: 290px; border: 1px solid rgba(246, 244, 239, 0.16); border-radius: 50%; box-shadow: 0 0 0 22px rgba(246, 244, 239, 0.04), 0 0 0 45px rgba(246, 244, 239, 0.035); content: ""; }
-.preview-top, .preview-bottom { display: flex; align-items: center; justify-content: space-between; gap: 12px; color: rgba(246, 244, 239, 0.58); font-size: 0.63rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
-.preview-center { position: relative; padding: 26px 0; }
-.preview-mark { display: block; color: var(--preview-accent); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.27em; }
-.preview-title { max-width: 430px; margin: 15px 0 0; color: var(--paper); font-size: clamp(2.2rem, 5vw, 4.1rem); font-weight: 800; letter-spacing: -0.095em; line-height: 0.9; }
-.preview-line { width: 57px; height: 2px; margin-top: 24px; background: var(--preview-accent); }
+.project-preview { position: relative; aspect-ratio: 3 / 2; overflow: hidden; background: #171b1a; }
+.project-image { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; transition: transform 550ms ease; }
+.project-card:hover .project-image { transform: scale(1.03); }
 .project-content { padding: 26px; }
 .project-content-head { display: flex; align-items: baseline; justify-content: space-between; gap: 18px; }
 .project-name { margin: 0; color: var(--paper); font-size: 1.35rem; font-weight: 750; letter-spacing: -0.045em; }
@@ -228,7 +223,6 @@ textarea.field-control { min-height: 128px; resize: vertical; padding: 14px; }
   .highlight:nth-child(3) { padding-left: 0; }
   .skill-grid, .project-grid, .service-grid { grid-template-columns: 1fr; }
   .skill-grid, .project-grid, .service-grid, .contact-layout { margin-top: 44px; }
-  .project-preview { min-height: 250px; }
   .contact-layout { display: block; }
   .contact-form { margin-top: 18px; }
   .footer-grid { grid-template-columns: 1fr 1fr; }

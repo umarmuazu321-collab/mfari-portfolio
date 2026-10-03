@@ -10,6 +10,8 @@ const projects = [
       { label: 'View Code', href: 'https://github.com/umarmuazu321-collab/business-manager' },
     ],
     mark: 'BM',
+    image: '/assets/projects/business-manager-preview.png',
+    imageAlt: 'Business Manager dashboard preview',
     start: '#28355b',
     end: '#111a2f',
     accent: '#c4f36b',
@@ -22,6 +24,8 @@ const projects = [
     technologies: ['React', 'Vite', 'Tailwind CSS'],
     links: [{ label: 'View Live Site', href: 'https://albaraka-food-items.vercel.app/' }],
     mark: 'AF',
+    image: '/assets/projects/albaraka-food-items-preview.png',
+    imageAlt: 'Albaraka Food Items website preview',
     start: '#654429',
     end: '#241711',
     accent: '#ffd28f',
@@ -37,6 +41,8 @@ const projects = [
       { label: 'View Code', href: 'https://github.com/umarmuazu321-collab/akoya-laundry' },
     ],
     mark: 'AL',
+    image: '/assets/projects/akoya-luxury-laundry-preview.png',
+    imageAlt: 'AKOYA Luxury Laundry website preview',
     start: '#2c4560',
     end: '#111c2c',
     accent: '#a8dcff',
@@ -49,6 +55,8 @@ const projects = [
     technologies: [],
     links: [{ label: 'View Live Site', href: 'https://khadycandy.vercel.app/' }],
     mark: 'KC',
+    image: '/assets/projects/khadycandy-preview.png',
+    imageAlt: 'KHADYCANDY website preview',
     start: '#4b3261',
     end: '#1b1528',
     accent: '#f4b6ff',
@@ -70,17 +78,8 @@ function Projects() {
         <div className="project-grid">
           {projects.map((project) => (
             <article key={project.fullName} className="project-card">
-              <div
-                className="project-preview"
-                style={{ '--preview-start': project.start, '--preview-end': project.end, '--preview-accent': project.accent }}
-              >
-                <div className="preview-top"><span>Project {project.number}</span><span>{project.mark}</span></div>
-                <div className="preview-center">
-                  <span className="preview-mark">{project.mark}</span>
-                  <h3 className="preview-title">{project.name}</h3>
-                  <div className="preview-line" />
-                </div>
-                <div className="preview-bottom"><span>Completed project</span><span>↗</span></div>
+              <div className="project-preview">
+                <img className="project-image" src={project.image} alt={project.imageAlt} />
               </div>
 
               <div className="project-content">
